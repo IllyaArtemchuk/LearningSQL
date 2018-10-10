@@ -1,0 +1,43 @@
+
+1. String
+2. Integer
+3. Date
+4. Float
+5. Currency
+
+2. A database is used when the data has to be accessed from multiple locations, or the data must be changed frequently from multiple locations.
+A database also benefits from being able to be easily searched using SQL.
+A text file can be used for mostly static data that will not run into issues from multiple people changing it at the same time.
+
+
+3. It is a declarative programming language. This means that commands are given but the step by step procedure does not have to be written 
+in like other languages. You input a desired result and the language will perform the steps on its own to get the result specified.
+
+4. The database system is typically set up in a table, with rows being discrete units of grouped data, while the columns seperate the types of data that the database can hold.
+SQL is used to query the database for the desired data, using the rows and columns in it's query to filter the result. 
+
+5. Table - the whole of the data. It is a typical table made of rows and columns, with the rows holding one group of data that relates to each other and columns organizing the types of data.
+
+6. Integers, Strings, Floats.
+
+7. 
+ The data and amount columns are selected from the payments data table.
+
+The amount column is selected from the payments data table if the amount is greater than 500.
+
+All the columns are selected from the payments data table if the payee is "Mega Foods".
+
+8. 
+
+SELECT email, signup
+FROM users
+WHERE name = 'DeAndre Data';
+
+SELECT userid
+FROM users
+WHERE email = 'aleesia.algorithm@uw.edu';
+
+SELECT *
+FROM users
+WHERE userid = 4;
+
