@@ -23,9 +23,58 @@ SQL is used to query the database for the desired data, using the rows and colum
 7. 
  The data and amount columns are selected from the payments data table.
 
+---
+
+**Query #1**
+
+    SELECT date, amount
+         FROM payments;
+
+| date                     | amount    |
+| ------------------------ | --------- |
+| 2016-05-01T00:00:00.000Z | 1500.0000 |
+| 2016-05-10T00:00:00.000Z | 37.0000   |
+| 2016-05-15T00:00:00.000Z | 124.9300  |
+| 2016-05-23T00:00:00.000Z | 54.7200   |
+
+---
+
+
+
 The amount column is selected from the payments data table if the amount is greater than 500.
 
+---
+
+**Query #1**
+
+    SELECT amount
+         FROM payments
+         WHERE amount > 500;
+
+| amount    |
+| --------- |
+| 1500.0000 |
+
+---
+
+
 All the columns are selected from the payments data table if the payee is "Mega Foods".
+
+---
+
+**Query #1**
+
+    SELECT *
+         FROM payments
+         WHERE payee = 'Mega Foods';
+
+| date                     | payee      | amount   | memo      |
+| ------------------------ | ---------- | -------- | --------- |
+| 2016-05-15T00:00:00.000Z | Mega Foods | 124.9300 | Groceries |
+
+---
+
+[View on DB Fiddle](https://www.db-fiddle.com/f/5gVGFmB8Aq66SejCFEbfdd/0)
 
 8. 
 
@@ -33,11 +82,45 @@ SELECT email, signup
 FROM users
 WHERE name = 'DeAndre Data';
 
-SELECT userid
-FROM users
-WHERE email = 'aleesia.algorithm@uw.edu';
+---
 
-SELECT *
-FROM users
-WHERE userid = 4;
+**Query #1**
+
+    SELECT email, signup
+    FROM users
+    WHERE name = 'DeAndre Data';
+
+| email             | signup                   |
+| ----------------- | ------------------------ |
+| datad@comcast.net | 2008-01-20T00:00:00.000Z |
+
+---
+
+---
+
+**Query #1**
+
+    SELECT userid
+    FROM users
+    WHERE email = 'aleesia.algorithm@uw.edu';
+
+| userid |
+| ------ |
+| 1      |
+
+---
+
+---
+
+**Query #1**
+
+    SELECT *
+    FROM users
+    WHERE userid = 4;
+
+| userid | name           | email             | signup                   |
+| ------ | -------------- | ----------------- | ------------------------ |
+| 4      | Brandy Boolean | bboolean@nasa.gov | 1999-10-15T00:00:00.000Z |
+
+---
 
